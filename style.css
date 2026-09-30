@@ -386,3 +386,40 @@ footer {
     padding: 8px;
     border-bottom: 1px solid rgba(56, 73, 89, 0.5);
 }
+/* Responsive Navbar Styles for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none; /* Mobile වලදී ලින්ක්ස් ටික Hide කරලා Menu button එකෙන් පෙන්වනවා නම් */
+        width: 100%;
+        flex-direction: column;
+        background: #273440;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Mobile වල Notification container එක සහ Menu toggle එක එකම පේළියක හරියට align වීමට */
+    .notification-container {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .notification-dropdown {
+        width: 250px;
+        right: -50px; /* ෆෝන් එකේ screen එකෙන් එළියට නොපෙනී යාමට සකස් කිරීම */
+    }
+}
